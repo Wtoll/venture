@@ -3,7 +3,7 @@
 
 name = "Venture"
 license = "MIT"
-licenselink = ""
+licenselink = "https://github.com/Wtoll/venture/blob/master/LICENSE"
 description = ""
 homepage = ""
 tags = []
@@ -11,11 +11,10 @@ features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "William Toll"
+  homepage = "https://wtoll.com"
 
 # If porting an existing theme
 [original]
-  name = ""
-  homepage = ""
-  repo = ""
+  author = "Fred Wilson"
+  homepage = "https://avc.com"
