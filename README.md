@@ -1,5 +1,7 @@
 # Venture
 
+[![venture](https://img.shields.io/badge/Hugo--Themes-@Venture-blue)](https://themes.gohugo.io/themes/venture/)
+
 Venture is a bold, minimalist theme for Hugo inspired by [avc.com](https://avc.com).
 
 ## To Do

@@ -10,6 +10,10 @@
           <a href="{{ .URL }}">{{ .Pre }}<span>{{ .Name }}</span></a>
         {{ end }}
 
+        {{ if $.Site.Params.archives.show }}
+          <a>Archives</a>
+        {{ end }}
+
         {{ range (first 1 (where $.Site.Pages "Section" "about")) }}
           <a href="{{ .Permalink }}">About</a>
         {{ end }}
