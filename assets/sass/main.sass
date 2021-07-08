@@ -1,0 +1,205 @@
+$accent-color: {{ if isset $.Site.Params "accent_color" }}{{ $.Site.Params.accent_color }}{{ else }}#729426{{ end }}
+$not-black: #282828
+
+body
+  max-width: 650px
+  margin: 0 auto
+  padding: 0 25px
+  font-size: 18px
+  color: $not-black
+  line-height: 1
+
+main
+  padding: 40px 0px
+
+p, dl, li, ul
+  font-family: "Source Serif Pro", serif
+  line-height: 1.8
+
+a
+  color: $accent-color
+  &:hover
+    color: lighten($accent-color, 10%)
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Archivo", sans-serif
+  font-weight: 900
+
+article > time
+  text-transform: uppercase
+  font-size: 12px
+  font-family: "Archivo", sans-serif
+  font-weight: 900
+  color: #888
+  margin: 0 0 10px 0
+  display: block
+
+article > h1
+  margin: 0 0 30px 0
+
+hr
+  border: none
+  border-bottom: 1px solid #ccc
+
+blockquote
+  font-weight: 600
+  font-style: italic
+  border-left: 1px solid #ccc
+  padding: 12px 18px
+  margin: 32px 0px
+  line-height: 1.5
+
+blockquote > p
+  margin: 0
+  font-family: "Newsreader", serif
+
+table
+  font-family: "Source Serif Pro", serif
+  line-height: 1.8
+  border-spacing: 0
+  border-collapse: collapse
+  width: 100%
+  overflow-x: scroll
+  display: block
+  max-width: fit-content
+  white-space: nowrap
+  margin: 0 auto
+
+table > tbody > tr > td, table > thead > tr > th
+  border: 1px solid rgba(51, 51, 51, 0.1)
+
+table > tbody > tr:nth-child(2n+1)
+  background: rgba(0, 0, 0, 0.04)
+
+td, th
+  padding: .4em
+
+article > section.body > *
+  margin: 30px 0 0 0
+
+article > section.body > p+ul, article > section.body > p+ol
+  margin: 0
+
+code
+  background-color: #f1f1f1
+  border-radius: 4px
+  padding: .1em .2em
+  font-family: "IBM Plex Mono", monospace
+
+pre
+  background-color: #ececec
+  line-height: 1.4
+  overflow-x: auto
+  padding: 1em
+  border-radius: 4px
+
+.highlight > pre > ::selection
+  background: rgba(255, 255, 255, 0.2)
+  color: inherit
+
+pre > code
+  background-color: transparent
+  color: inherit
+  font-size: 100%
+  padding: 0
+
+div.tags
+  margin-top: 30px
+  li
+    list-style-type: none
+    display: inline-block
+    margin: 0 5px
+    font-size: 12px
+    font-family: "IBM Plex Mono", monospace
+    a
+      color: #a0a0a0
+      text-decoration: none
+      &:hover
+        color: lighten($accent-color, 10%)
+        text-decoration: underline
+
+div.next-and-prev
+  margin: 30px 0
+  a
+    font-family: "Archivo", sans-serif
+    font-weight: 900
+    color: #282828
+    text-decoration: none
+    font-size: 11px
+    text-transform: uppercase
+    &.next
+      float: left
+      svg
+        margin: 0px 15px 0px 0px
+    &.prev
+      float: right
+      svg
+        margin: 0px 0px 0px 15px
+
+footer
+  display: flex
+  justify-content: center
+  align-items: center
+  p
+    padding: 20px 0
+    font-family: "Archivo", sans-serif
+    font-weight: 900
+    color: #cccccc
+    font-size: 11px
+    text-transform: uppercase
+
+h1 > a
+  color: $not-black
+  text-decoration: none
+  transition: color 0.2s
+
+article
+  display: block
+  padding: 60px 0
+
+main > article:first-child
+  padding-top: 0px
+
+header > div.content
+  padding-top: 25px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+header > div.content > div.right
+  display: flex
+  align-items: center
+
+header > div.content > div.right > div.links > a
+  text-transform: uppercase
+  font-size: 11px
+  font-family: "Archivo", sans-serif
+  font-weight: 900
+  color: $not-black
+  text-decoration: none
+  transition: color 0.2s
+  padding: 5px
+  &:hover
+    color: $accent-color
+
+header > div.content > div.right > a > img.pfp
+  margin-left: 25px
+  width: 44px
+  border-radius: 50%
+
+header > div.content > div.left > a
+  color: black
+  fill: black
+  transition: color 0.25s, fill 0.25s
+  text-decoration: none
+  &:hover
+    color: $accent-color
+    fill: $accent-color
+  > *
+    max-height: 36px
+    margin: 24.12px 0px
+    text-transform: uppercase
+
+article.about
+  margin-top: -40px
+  padding-bottom: 0px

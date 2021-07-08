@@ -4,10 +4,18 @@
 name = "Venture"
 license = "MIT"
 licenselink = "https://github.com/Wtoll/venture/blob/master/LICENSE"
-description = ""
-homepage = ""
-tags = []
-features = []
+description = "A bold, minimalist theme for Hugo"
+homepage = "https://github.com/Wtoll/venture"
+tags = [
+  "simple",
+  "clean",
+  "bold",
+  "minimalist"
+]
+features = [
+  "responsive",
+  "blog",
+]
 min_version = "0.41.0"
 
 [author]

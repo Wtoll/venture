@@ -1,0 +1,21 @@
+<!-- Header Partial -->
+<header>
+  <div class="content">
+    <div class= "left">
+      <a href="{{ $.Site.BaseURL }}">{{ if isset $.Site.Params "home_header_content" }}{{ $.Site.Params.home_header_content | safeHTML }}{{ else }}<h1>{{ $.Site.Title }}</h1>{{ end }}</a>
+    </div>
+    <div class="right">
+      <div class="links">
+        {{ range $.Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Pre }}<span>{{ .Name }}</span></a>
+        {{ end }}
+
+        {{ range (first 1 (where $.Site.Pages "Section" "about")) }}
+          <a href="{{ .Permalink }}">About</a>
+        {{ end }}
+      </div>
+      {{ with $.Site.Params.pfp }}<a href="{{ $.Site.BaseURL }}"><img class="pfp" src="{{ . | absURL }}"></img></a>{{ end }}
+    </div>
+  </div>
+  <hr />
+</header>

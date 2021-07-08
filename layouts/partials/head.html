@@ -1,0 +1,13 @@
+<!-- Head Partial -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ if hugo.IsProduction | or (eq .Site.Params.env "production") }}<meta name="robots" content="index, follow">{{ else }}<meta name="robots" content="noindex, nofollow">{{ end }}
+  <title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} - {{ end }}{{ end }}{{ .Site.Title }}</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=IBM+Plex+Mono&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{ $main_styles := resources.Get "sass/main.sass" | resources.ExecuteAsTemplate "main.sass" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $main_styles.Permalink }}">
+<head>
